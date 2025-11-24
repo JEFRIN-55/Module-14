@@ -40,13 +40,12 @@ def findWaitingTime(processes, n, bt, wt):
         wt[i] = bt[i - 1] + wt[i - 1]
 
 def findTurnAroundTime(processes, n, bt, wt, tat):
-    # turnaround time = burst time + waiting time
     for i in range(n):
         tat[i] = bt[i] + wt[i]
 
 def findavgTime(processes, n, bt):
-    wt = [0] * n  # Waiting times
-    tat = [0] * n  # Turnaround times
+    wt = [0] * n  
+    tat = [0] * n  
     total_wt = 0
     total_tat = 0
 
@@ -65,7 +64,6 @@ def findavgTime(processes, n, bt):
     print(f"Average turn around time = {total_tat / n:.2f}")
 
 if __name__ == "__main__":
-    # process ids
     processes = [1, 2, 3]
     n = len(processes)
 
