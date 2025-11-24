@@ -39,7 +39,6 @@ class Queue:
             print(f'Queue is full')
             return
 
-        #print(f'Inserting {item}')
         self.items[self.tail] = item
         self.tail = (self.tail + 1) % self.max_size
         self.size += 1
@@ -72,8 +71,6 @@ queue.enqueue(str2)
 
     
 print(queue.items)
-#print(queue.head)
-#print(queue.tail)
 ```
 ---
 ### OUTPUT
